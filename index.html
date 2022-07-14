@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>project</title>
+    <link rel="stylesheet" href="project1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    
+</head>
+<body>
+    <div id="div">
+        <div id="div1"><a href="#"><img src="images/N180431.jpg" id="img" /></a></div>
+        <div id="div2"><h1 id="h1">Homepage</h1></div>
+        <b id="icon">&equiv;</b>
+
+    </div>
+    <nav id="nav1">
+
+        <ul>
+            <li><a href="index.html"  id="li" class="a"><i class="fa fa-home " aria-hidden="true"></i>Home</a></li>
+            <li><a href="exam.html" target="a" id="li"><i class="fa fa-book" aria-hidden="true"></i>Exam</a></li>
+            <li>
+                <a href="#" id="li"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Branch</a>
+                <ul id="ul1" class="drop">
+                    <li>
+                        <a href="#" id="li1">CSE</a>
+                        <ul>
+                            <li><a href="student.html" target="a">Student</a></li>
+                            <li><a href="faculty.html" target="a">Faculty</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" id="li1">ECE</a>
+                        <ul>
+                            <li><a href="student.html" target="a">Student</a></li>
+                            <li><a href="faculty.html" target="a">Faculty</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" id="li1">MECH</a>
+                        <ul>
+                            <li><a href="student.html" target="a">Student</a></li>
+                            <li><a href="faculty.html" target="a">Faculty</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="resume.html" id="li"><i class="fa fa-user" aria-hidden="true"></i>About</a></li>
+            <li><a href="contact1.html" id="c"><i class="fa fa-phone" aria-hidden="true"></i>Contact</a></li>
+        </ul>
+
+
+    </nav>
+    <div id="nav">
+        <button id="btn"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+        <ul>
+            <li><a href="index.html" id="a"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+            <li><a href="exam.html" target="a" id="a"><i class="fa fa-book" aria-hidden="true"></i>Exam</a></li>
+            <li>
+                <a href="#" id="a"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Branch</a>
+                <ul id="ul1" class="drop">
+                    <li>
+                        <a href="#" id="a">CSE</a>
+                        <ul>
+                            <li><a href="student.html" target="a" id="a">Student</a></li>
+                            <li><a href="faculty.html" target="a" id="a">Faculty</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" id="a">ECE</a>
+                        <ul>
+                            <li><a href="student.html" target="a" id="a">Student</a></li>
+                            <li><a href="faculty.html" target="a" id="a">Faculty</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" id="a">MECH</a>
+                        <ul>
+                            <li><a href="student.html" target="a" id="a">Student</a></li>
+                            <li><a href="faculty.html"  target="a" id="a">Faculty</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="resume.html" id="a"><i class="fa fa-user" aria-hidden="true"></i>About</a></li>
+            <li><a href="contact1.html" id="a"><i class="fa fa-phone" aria-hidden="true" ></i>Contact</a></li>
+        </ul>
+    </div>
+    <div id="maindiv">
+        <iframe src="filter.html" id="div4">
+
+        </iframe>
+            <iframe src="imageslider2.html" name="a" style="border-width:0px;top:-10px;bottom:10px;width:800px;height:440px;" id="if"></iframe>
+            <div src="notification.html" id="div5">
+                <div style="width:200px;text-align:center;"><h1 style="text-align:center;color:#000;">Notification</h1></div>
+                </div>
+    </div>
+    <div id="div6" style="border-style:solid;border-width:1px;height:30px;width:1350px;margin-left:-10px;margin-top:0px;text-align:center;background-color:cadetblue">
+        <b>@Rgukt Copy right&copy;2022 </b>
+
+    </div>
+
+        <script>
+
+            var v = document.getElementById("icon");
+            v.addEventListener("click", show);
+            function show() {
+                document.getElementById("nav").style.visibility = "visible";
+                document.getElementById("nav1").style.visibility = "hidden";
+                document.getElementById("maindiv").style.marginTop = "-110px";
+                document.getElementById("maindiv").style.height = "500px";
+                
+
+            }
+            var v1 = document.getElementById("btn");
+            v1.addEventListener("click", hide);
+            function hide() {
+                document.getElementById("nav").style.visibility = "hidden";
+                document.getElementById("nav1").style.visibility = "visible";
+                document.getElementById("maindiv").style.marginTop = "-50px";
+                document.getElementById("maindiv").style.height = "460px";
+               
+
+            }
+
+            var counter = 1;
+            setInterval(function () {
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if (counter > 4) {
+                    counter = 1;
+                }
+            }, 5000);
+
+
+
+
+        </script>
+    
+</body>
+</html>
