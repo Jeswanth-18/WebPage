@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>filter</title>
+</head>
+<body style="background-color:silver">
+    <center>
+        <h1 style="text-align:center;color: rgb(66, 33, 33);">Search Your ID</h1>
+        <input type="text" placeholder="Search here..."  id="search" style="border-radius:5px;height:20px;width:250px;position:relative"/>
+        <ul style="list-style:none">
+            <li style="color:#000">N180431</li>
+            <li  style="color:#000">N180183</li>
+            <li  style="color:#000">N180605</li>
+            <li  style="color:#000">N180909</li>
+            <li  style="color:#000">N180185</li>
+            <li  style="color:#000">N180412</li>
+            <li  style="color:#000">N180153</li>
+            <li  style="color:#000">N180143</li>
+            <li  style="color:#000">N180192</li>
+            <li  style="color:#000">N180178</li>
+            <li  style="color:#000">N180123</li>
+            <li  style="color:#000">N180786</li>
+            <li  style="color:#000">N180321</li>
+            <li  style="color:#000">N180148</li>
+            <li  style="color:#000">N180100</li>
+
+        </ul>
+    </center>
+    <script>
+        var search = document.getElementById("search");
+        search.addEventListener("keyup", searchitem, false);
+        function searchitem(e) {
+            var text = e.target.value.toLowerCase();
+            var items = document.getElementsByTagName("li");
+            Array.from(items).forEach((item) => {
+                itemvalue = item.firstChild.textContent;
+                if (itemvalue.toLowerCase().indexOf(text) != -1) {
+                    item.style.display = "block";
+
+                }
+                else
+                    item.style.display = "none";
+            })
+        }
+    </script>
+</body>
+</html>
